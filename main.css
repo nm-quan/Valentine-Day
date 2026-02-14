@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: #000;
+}
+
+p {
+    font-size: 12px;
+    line-height: 8px;
+    text-align: justify;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background: url(nice.jpeg) no-repeat center;
+    background-attachment: fixed;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: rgb(225, 225, 255, 0);
+}
+
+#export-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffb7b2;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    user-select: none;
+}
+
+#export-btn:hover {
+    background-color: #ff9e99;
+    transform: scale(1.05);
+}
+
+#export-btn:active {
+    transform: scale(0.95);
+}
+
+@keyframes reveal {
+    0% {
+        clip-path: circle(0% at 0 0);
+    }
+
+    100% {
+        clip-path: circle(200% at 0 0);
+    }
+}
+
+#text-portrait {
+    animation: reveal 5s linear forwards;
+}
